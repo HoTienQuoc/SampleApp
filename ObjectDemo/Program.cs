@@ -15,15 +15,20 @@ namespace ObjectDemo
             // custAccount.AccountNumber = 53211;
             // <--Alternative-->
 
-            BankAccount custAccount = new BankAccount()
-            {
-                AccountName = "John Smith",
-                AccountNumber = 53211
-            };
+            // BankAccount custAccount = new BankAccount()
+            // {
+            //     AccountName = "John Smith",
+            //     AccountNumber = 53211
+            // };
+
+            BankAccount custAccount = new BankAccount("Fred Wilson",
+                        123456);
 
             Console.WriteLine($"Customer Name is {custAccount.AccountName}");
 
             Console.WriteLine($"Account Number = {custAccount.AccountNumber}");
+
+
 
             custAccount.DisplayName();
 
@@ -31,6 +36,9 @@ namespace ObjectDemo
 
             double maxBalance = BankAccount.GetMaxBalance();
             Console.WriteLine($"Maximum allowed balance = ${maxBalance}");
+
+            BankAccount custAccount1 = new("John Smith", 53211);
+            BankAccount custAccount2 = new("John Smith", 53211, true);
         }
     }
 }

@@ -1,0 +1,15 @@
+/Users/gokuquoc/SampleApp/MethodDemo/bin/Debug/net9.0/MethodDemo
+/Users/gokuquoc/SampleApp/MethodDemo/bin/Debug/net9.0/MethodDemo.deps.json
+/Users/gokuquoc/SampleApp/MethodDemo/bin/Debug/net9.0/MethodDemo.runtimeconfig.json
+/Users/gokuquoc/SampleApp/MethodDemo/bin/Debug/net9.0/MethodDemo.dll
+/Users/gokuquoc/SampleApp/MethodDemo/bin/Debug/net9.0/MethodDemo.pdb
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.AssemblyInfoInputs.cache
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.AssemblyInfo.cs
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.csproj.CoreCompileInputs.cache
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.sourcelink.json
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.dll
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/refint/MethodDemo.dll
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.pdb
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/MethodDemo.genruntimeconfig.cache
+/Users/gokuquoc/SampleApp/MethodDemo/obj/Debug/net9.0/ref/MethodDemo.dll

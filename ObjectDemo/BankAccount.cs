@@ -7,9 +7,37 @@ public class BankAccount
     private string _accountName = "";
     private int _accountNumber = 0;
 
+    private bool _isActive = false;
+
     private static int interestRate;
 
     public readonly int daysInWeek = 7;
+    // Constructor
+    public BankAccount(string accountName, int accountNumber)
+    {
+        // _accountName = accountName;
+        // _accountNumber = accountNumber;
+        if (accountName == "")
+            _accountName = "Anonymous";
+        else
+            _accountName = accountName;
+        _accountNumber = accountNumber;
+    }
+
+    public BankAccount(string accountName, int accountNumber, bool isActive)
+    {
+        _accountName = accountName;
+        _accountNumber = accountNumber;
+        _isActive = isActive;
+    }
+
+    public bool IsActive
+    {
+        get => _isActive;
+        set => _isActive = value;
+    }
+
+
 
     public string AccountName
     {
