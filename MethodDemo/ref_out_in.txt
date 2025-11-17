@@ -1,0 +1,17 @@
+1. ref – Truyền tham chiếu, biến phải được khởi tạo trước
+Dùng khi bạn muốn hàm đọc và ghi vào biến.
+Biến truyền vào bắt buộc phải được gán giá trị trước.
+
+
+2. out – Trả kết quả về qua tham số, biến không cần khởi tạo
+Dùng khi hàm cần trả về nhiều giá trị.
+Biến truyền vào không cần gán giá trị trước, 
+nhưng hàm bắt buộc phải gán giá trị cho nó.
+
+
+3. in – Truyền tham chiếu chỉ đọc (read-only)
+Dùng khi bạn muốn truyền tham số theo tham chiếu để tránh 
+copy dữ liệu lớn nhưng không cho phép hàm thay đổi giá trị.
+Biến truyền vào phải được khởi tạo.
+
+

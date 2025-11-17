@@ -24,11 +24,13 @@ namespace MethodDemo
             int myVar = 20;
             Console.WriteLine($"Before method call myVar = {myVar}");
             demo.DoSomething(ref myVar);
-            Console.WriteLine($"After method call myVar = {myVar}");
+            Console.WriteLine($"After method(ref) call myVar = {myVar}");
 
             string myVar1;
             demo.DoSomething(out myVar1);
-            Console.WriteLine($"After method call myVar = {myVar1}");
+            Console.WriteLine($"After method(out) call myVar = {myVar1}");
+
+            demo.DoSomething(in myVar);
         }
     }
 }
