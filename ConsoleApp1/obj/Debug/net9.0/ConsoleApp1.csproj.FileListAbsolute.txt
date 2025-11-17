@@ -7,6 +7,7 @@
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfoInputs.cache
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfo.cs
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.sourcelink.json
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.dll
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/refint/ConsoleApp1.dll
 /Users/gokuquoc/SampleApp/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.pdb
