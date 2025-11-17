@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wUwI8N/wbnI=",
+  "dgSpecHash": "/6adroP9+MA=",
   "success": true,
   "projectFilePath": "/Users/gokuquoc/SampleApp/SampleApp/SampleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/gokuquoc/.nuget/packages/microsoft.netcore.app.ref/9.0.11/microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "/Users/gokuquoc/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
+    "/Users/gokuquoc/.nuget/packages/microsoft.netcore.app.host.osx-arm64/9.0.11/microsoft.netcore.app.host.osx-arm64.9.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

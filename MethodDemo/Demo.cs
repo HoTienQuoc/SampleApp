@@ -23,8 +23,13 @@ public class Demo
         }
     }
 
-    public void DoSomething(int myVar)
+    public void DoSomething(ref int myVar)
     {
         myVar = 10;
+    }
+
+    public void DoSomething(out string myVar)
+    {
+        myVar = "Hello";
     }
 }
