@@ -4,27 +4,26 @@ namespace DelegateDemo
 
     internal class Program
     {
-        public delegate string MyDelegate(string s);
-        public static string GetLength(string s)
-        {
-            return "Length of the string is: " + s.Length;
-        }
+        delegate string StringConverter(string value);
 
-        public static string CustomerCount(string customer)
+        static string LowerCase(string value)
         {
-            return "Total Customers: 100";
+            Console.Write("Converting to lowercase > ");
+            return value.ToLower();
+        }
+        static string UpperCase(string value)
+        {
+            Console.Write("Converting to uppercase > ");
+            return value.ToUpper();
         }
         static void Main(string[] args)
         {
-
-            MyDelegate delegate1 = new MyDelegate(GetLength);
-            MyDelegate delegate2 = new MyDelegate(CustomerCount);
-
-            var strlen = delegate1("This is some text");
-            var count = delegate2("Robert Addison");
-
-            Console.WriteLine(strlen);
-            Console.WriteLine(count);
+            StringConverter converter1 = new(LowerCase);
+            StringConverter converter2 = new(UpperCase);
+            var lower = converter1("This is some TEXT");
+            Console.WriteLine(lower);
+            var upper = converter2("tHis IS sOmE TExt");
+            Console.WriteLine(upper);
         }
     }
 }
