@@ -1,0 +1,113 @@
+Delegate trong C# là một kiểu dữ liệu tham chiếu dùng để đại diện cho một phương thức có một signature (kiểu trả về và các tham số) cụ thể. Nó giống như một "con trỏ hàm" trong C++ hoặc một giao diện cho một phương thức.
+
+Dưới đây là một số điểm chính để hiểu về Delegate:
+
+Con trỏ Hàm (Function Pointer): Về cơ bản, delegate là một cách để tham chiếu đến một phương thức. Thay vì gọi phương thức trực tiếp, bạn có thể gọi nó thông qua delegate.
+Đại diện cho một Phương thức: Delegate không tự thực hiện bất kỳ hành động nào. Nó chỉ là một đại diện cho một phương thức mà nó được chỉ định.
+An toàn Kiểu (Type-Safe): Delegate được kiểm tra kiểu chặt chẽ. Khi bạn khai báo một delegate, bạn phải chỉ định kiểu trả về và các tham số mà các phương thức mà delegate đó có thể đại diện phải có. Điều này đảm bảo rằng bạn chỉ có thể gán các phương thức tương thích với delegate.
+Sử dụng phổ biến:
+Xử lý Sự kiện (Event Handling): Đây là một trong những ứng dụng phổ biến nhất của delegate. Khi một sự kiện xảy ra (ví dụ: người dùng nhấp vào nút), delegate được sử dụng để gọi các phương thức (event handlers) đã đăng ký để phản ứng lại sự kiện đó.
+Callback Methods: Delegate cho phép bạn truyền một phương thức như một đối số cho một phương thức khác. Phương thức đó sau đó có thể gọi lại phương thức được truyền vào vào một thời điểm thích hợp.
+Multicasting (Đa hướng): Một delegate có thể tham chiếu đến nhiều phương thức cùng một lúc. Khi delegate được gọi, tất cả các phương thức mà nó tham chiếu sẽ được thực thi theo thứ tự.
+LINQ (Language Integrated Query): Delegate được sử dụng rộng rãi trong LINQ, đặc biệt là với các biểu thức lambda, để định nghĩa các truy vấn và thao tác dữ liệu.
+Thread Pools và Asynchronous Programming: Delegate được sử dụng để chỉ định các phương thức sẽ được thực thi trên các luồng khác hoặc trong các hoạt động bất đồng bộ.
+Cú pháp khai báo Delegate:
+
+code
+C#
+
+download
+
+content_copy
+
+expand_less
+public delegate void MyDelegate(string message);
+public delegate: Từ khóa để khai báo một delegate.
+void: Kiểu trả về của các phương thức mà delegate này có thể đại diện.
+MyDelegate: Tên của delegate.
+(string message): Các tham số của các phương thức mà delegate này có thể đại diện.
+Ví dụ minh họa:
+
+code
+C#
+
+download
+
+content_copy
+
+expand_less
+using System;
+
+// 1. Khai báo một delegate
+public delegate void PrintMessageDelegate(string message);
+
+public class Program
+{
+    // 2. Định nghĩa một phương thức có signature phù hợp với delegate
+    public static void ShowMessage(string msg)
+    {
+        Console.WriteLine("Thông điệp: " + msg);
+    }
+
+    public static void LogMessage(string text)
+    {
+        Console.WriteLine("LOG: " + text);
+    }
+
+    public static void Main(string[] args)
+    {
+        // 3. Tạo một thể hiện của delegate và gán một phương thức
+        PrintMessageDelegate printer1 = new PrintMessageDelegate(ShowMessage);
+
+        // Hoặc có thể viết ngắn gọn hơn:
+        // PrintMessageDelegate printer1 = ShowMessage;
+
+        // 4. Gọi phương thức thông qua delegate
+        printer1("Xin chào Delegate!"); // Output: Thông điệp: Xin chào Delegate!
+
+        // 5. Delegate đa hướng (Multicasting)
+        PrintMessageDelegate printer2 = ShowMessage;
+        printer2 += LogMessage; // Thêm phương thức LogMessage vào delegate
+
+        Console.WriteLine("\n--- Delegate đa hướng ---");
+        printer2("Đây là tin nhắn đa hướng.");
+        // Output:
+        // Thông điệp: Đây là tin nhắn đa hướng.
+        // LOG: Đây là tin nhắn đa hướng.
+
+        printer2 -= ShowMessage; // Xóa phương thức ShowMessage khỏi delegate
+
+        Console.WriteLine("\n--- Sau khi xóa ShowMessage ---");
+        printer2("Chỉ còn LogMessage.");
+        // Output:
+        // LOG: Chỉ còn LogMessage.
+    }
+}
+Trong ví dụ trên:
+
+Chúng ta khai báo một delegate tên là PrintMessageDelegate có kiểu trả về void và một tham số string.
+Chúng ta có hai phương thức ShowMessage và LogMessage có signature tương thích với PrintMessageDelegate.
+Chúng ta tạo một đối tượng delegate printer1 và gán phương thức ShowMessage cho nó.
+Khi chúng ta gọi printer1("Xin chào Delegate!"), thực tế là phương thức ShowMessage được gọi.
+Ví dụ về đa hướng cho thấy một delegate có thể giữ nhiều tham chiếu đến các phương thức và gọi tất cả chúng khi được invoke.
+Bạn có thể hình dung một delegate như một điều khiển từ xa chung cho nhiều thiết bị khác nhau, miễn là các thiết bị đó có cùng một loại nút bấm và chức năng tương tự. Bạn không cần biết thiết bị cụ thể nào đang được điều khiển, chỉ cần biết nó phản ứng với tín hiệu từ điều khiển đó.
+
+Đây là hình ảnh để bạn dễ hình dung hơn:
+
+
+Nguyên tắc chung là:
+
+Khi bạn khai báo một delegate, bạn đang định nghĩa một "khuôn mẫu" cho các phương thức mà delegate đó có thể đại diện. Khuôn mẫu này bao gồm:
+
+Kiểu trả về (Return Type): Kiểu dữ liệu mà phương thức phải trả về (ví dụ: void, int, string, bool, v.v.).
+Số lượng tham số (Number of Parameters): Số lượng các đối số mà phương thức phải nhận.
+Kiểu của các tham số (Types of Parameters): Kiểu dữ liệu của từng đối số.
+Thứ tự của các tham số (Order of Parameters): Thứ tự mà các đối số xuất hiện.
+Nếu bất kỳ điều nào trong số này không khớp, bạn sẽ không thể gán phương thức đó cho delegate. Delegate là type-safe (an toàn kiểu), có nghĩa là nó thực thi sự khớp kiểu chặt chẽ này tại thời điểm biên dịch để ngăn chặn lỗi.
+
+Tương tự, nếu bạn định nghĩa một delegate với kiểu trả về là int:
+
+Tóm lại, kiểu trả về của delegate và phương thức được gán phải khớp nhau chính xác.
+
+
+Note: function kiểu void thì gán void nếu gán int hay string thì bị lỗi
