@@ -24,6 +24,17 @@ namespace DelegateDemo
             Console.WriteLine(lower);
             var upper = converter2("tHis IS sOmE TExt");
             Console.WriteLine(upper);
+
+            StringConverter multicast = converter1 + converter2;
+            var result = multicast("This is some TEXT");
+            Console.WriteLine(result);
+
+            StringConverter multicast1 = converter1 + converter2;
+            var result1 = multicast1("This is some TEXT");
+            Console.WriteLine(result1);
+            multicast1 -= converter2;
+            result1 = multicast1("AfTeR reMovAL oF converter2");
+            Console.WriteLine(result1);
         }
     }
 }
