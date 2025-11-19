@@ -16,6 +16,11 @@ namespace DelegateDemo
             Console.Write("Converting to uppercase > ");
             return value.ToUpper();
         }
+        static void DisplayText(StringConverter converter, string text)
+        {
+            string result = converter(text);
+            Console.WriteLine($"Converted text = {result}");
+        }
         static void Main(string[] args)
         {
             StringConverter converter1 = new(LowerCase);
@@ -35,6 +40,8 @@ namespace DelegateDemo
             multicast1 -= converter2;
             result1 = multicast1("AfTeR reMovAL oF converter2");
             Console.WriteLine(result1);
+
+            DisplayText(converter1, "This IS a teST.");
         }
     }
 }
