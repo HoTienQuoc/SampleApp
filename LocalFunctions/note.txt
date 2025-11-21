@@ -1,0 +1,6 @@
+Hàm cục bộ có nhiều điểm tương đồng với biểu thức lambda, 
+nhưng có một số điểm khác biệt quan trọng. 
+Hàm cục bộ là các phương thức được đặt tên và được khai báo bên trong các phương thức khác. 
+Giống như phương thức riêng tư, 
+hàm cục bộ không thể truy cập được bên ngoài phạm vi của phương thức chứa nó 
+và không cần phải được gán cho các biến ủy nhiệm.
