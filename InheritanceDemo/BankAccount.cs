@@ -15,9 +15,20 @@ public class BankAccount
         _accountBalance = accountBalance;
     }
 
+    public string AccountName
+    {
+        get => _accountName;
+        set => _accountName = value;
+    }
+
     public double AccountBalance
     {
         get => _accountBalance;
         set => _accountBalance = value;
+    }
+
+    public void DisplayName()
+    {
+        Console.WriteLine($"Customer name is {AccountName}");
     }
 }
