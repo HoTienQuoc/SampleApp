@@ -9,5 +9,10 @@ public class SayHello : Talk
         Console.WriteLine("Hello, World!");
     }
 
+    public override void Goodbye()
+    {
+        base.Goodbye();
+        Console.WriteLine("SayHello class says goodbye!");
+    }
 
 }

@@ -6,6 +6,7 @@
         {
             SayHello demo = new();
             demo.Speak();
+            demo.Goodbye();
         }
     }
 }
