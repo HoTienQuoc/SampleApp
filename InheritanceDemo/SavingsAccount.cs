@@ -23,6 +23,10 @@ public class SavingsAccount : BankAccount
     {
         return (_interestRate * AccountBalance) / 12;
     }
-
+    public override void DisplayName()
+    {
+        base.DisplayName();
+        Console.WriteLine($"Account is earning {InterestRate}%interest.");
+    }
 
 }

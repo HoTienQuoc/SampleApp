@@ -27,7 +27,7 @@ public class BankAccount
         set => _accountBalance = value;
     }
 
-    public void DisplayName()
+    virtual public void DisplayName()
     {
         Console.WriteLine($"Customer name is {AccountName}");
     }

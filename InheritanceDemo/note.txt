@@ -1,0 +1,19 @@
+Khi sử dụng tính năng kế thừa, không có gì lạ khi tìm thấy một phương thức 
+trong lớp cha gần như đáp ứng được những gì bạn cần nhưng lại cần phải sửa đổi 
+để cung cấp chính xác chức năng bạn yêu cầu. Một lựa chọn trong trường hợp này 
+là bỏ qua phương thức được kế thừa và viết một phương thức mới với tên hoàn toàn mới. 
+Một lựa chọn tốt hơn là ghi đè phương thức được kế thừa và viết một phiên bản mới trong lớp con. 
+Trước khi xem ví dụ, ba quy tắc cần tuân thủ khi ghi đè một phương thức:
+1. Phương thức ghi đè trong lớp con phải có cùng số lượng và kiểu tham số như phương 
+thức được ghi đè trong lớp cha.
+2. Phương thức mới phải có cùng kiểu trả về với phương thức cha.
+3. Khai báo phương thức trong lớp cơ sở phải được khai báo bằng các modifier ảo, trừu tượng hoặc ghi đè.
+Các chủ đề về thành viên lớp trừu tượng và ảo sẽ được đề cập trong chương tiếp theo.
+Trong lớp BankAccount của chúng ta, 
+chúng ta có một phương thức có tên là DisplayName(), dùng để hiển thị tên chủ tài khoản. 
+Trong lớp con SavingsAccount, chúng ta cũng có thể muốn xuất ra lãi suất hiện tại được gán cho tài khoản.
+Để đạt được điều này, bước đầu tiên là khai báo phương thức trong
+lớp BankAccount là phương thức ảo (virtual).
+
+virtual method ở class cha
+Overide method từ virtual method ở class con
