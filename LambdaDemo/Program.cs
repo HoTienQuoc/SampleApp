@@ -3,6 +3,15 @@
     internal class Program
     {
         delegate string StringConverter(string value);
+
+        delegate string StringConverter1(string value);
+
+        static void DisplayText(StringConverter converter, string text)
+        {
+            string result = converter(text);
+            Console.WriteLine($"Converted text = {result}");
+        }
+
         static void Main(string[] args)
         {
             StringConverter converter = delegate (string value)
@@ -12,6 +21,9 @@
             };
             var result = converter("This is some TEXT");
             Console.WriteLine(result);
+
+            DisplayText(converter, "This IS a teST.");
+
         }
     }
 }
