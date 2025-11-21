@@ -24,6 +24,10 @@
 
             DisplayText(converter, "This IS a teST.");
 
+            StringConverter converter3 = s => s.ToLower();
+            var result2 = converter3("LAMBDA Demo");
+            Console.WriteLine(result2);
+
         }
     }
 }
