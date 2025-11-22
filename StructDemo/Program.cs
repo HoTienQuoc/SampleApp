@@ -13,7 +13,8 @@
             //bạn sao chép toàn bộ dữ liệu của biến đó vào một vị trí bộ nhớ mới.
             SampleStruct myStruct1 = new(name: "Mark");
             SampleStruct myStruct2 = myStruct1;
-            myStruct2.Name = "David";
+            //error CS0191: A readonly variable cannot be assigned to (except in a constructor or a variable initializer)
+            // myStruct2.Name = "David";
             Console.WriteLine(myStruct1.BuildHelloMsg());
             Console.WriteLine(myStruct2.BuildHelloMsg());
 

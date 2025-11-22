@@ -24,3 +24,13 @@ chỉ có một thể hiện Class nhưng có nhiều tham chiếu trỏ đến 
 
 Một thay đổi đối với dữ liệu thể hiện bằng bất kỳ tham chiếu nào trong số đó 
 sẽ thay đổi dữ liệu cho tất cả các tham chiếu khác.
+
+
+
+Cấu trúc có thể được khai báo là readonly bằng cách sử dụng bổ ngữ readonly.
+Khi được khai báo theo cách này, tất cả các thành viên dữ liệu của 
+cấu trúc cũng phải được khai báo là readonly. Trong trường hợp thành viên trường, 
+điều này yêu cầu sử dụng bổ ngữ readonly. Mặt khác, các thuộc tính 
+phải được khai báo là readonly hoặc sử dụng các bộ truy cập init-only 
+(một chủ đề được đề cập trong chương "Giới thiệu về Lập trình Hướng đối tượng C#").
+Ví dụ, cấu trúc sau bao gồm cả trường readonly và thuộc tính init-only:

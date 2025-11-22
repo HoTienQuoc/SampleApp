@@ -2,13 +2,12 @@ using System;
 
 namespace StructDemo;
 
-public struct SampleStruct(string name)
+public readonly struct SampleStruct(string name)
 {
-    private string _name = name;
-    public string Name
+    private readonly string _name = name;
+    public readonly string Name
     {
         get => _name;
-        set => _name = value;
     }
     public string BuildHelloMsg()
     {
