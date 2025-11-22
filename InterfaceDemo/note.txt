@@ -1,0 +1,25 @@
+Theo mặc định, 
+không có quy tắc cụ thể nào mà một Interface C# phải tuân thủ, 
+miễn là Interface đó đúng về mặt cú pháp. Tuy nhiên, trong một số trường hợp, 
+một Interface phải đáp ứng các tiêu chí cụ thể để hoạt động với các Interface khác. 
+Điều này đặc biệt phổ biến khi viết các Interface cần hoạt động với các thư viện khác. 
+Interface là một tập hợp các quy tắc xác định các yêu cầu tối thiểu mà một Interface phải đáp ứng. 
+Interface được khai báo bằng từ khóa Interface 
+và xác định các phương thức và thuộc tính mà một Interface phải chứa để tuân thủ. 
+Khi một Interface áp dụng một Interface nhưng không đáp ứng tất cả các yêu cầu của Interface, 
+lỗi sẽ được báo cáo cho biết rằng Interface không tuân thủ Interface. 
+Không giống như các Abstract, 
+Interface không chứa các triển khai của các thành viên.
+
+
+Interface được khai báo khá giống với các Interface khác, 
+ngoại trừ việc chúng ta sử dụng từ khóa interface thay vì class trong khai báo. 
+Hãy xem xét khai báo Interface sau. 
+Bất kỳ Interface nào áp dụng Interface này đều phải bao gồm một phương thức có tên là DemoMethod(), 
+không chấp nhận tham số và trả về một giá trị chuỗi:
+
+
+Lưu ý rằng quy ước là thêm tiền tố "I" vào tên Interface để
+phân biệt chúng với các lớp không phải Interface.
+Không giống như các Abstract, một Interface không được chứa các implements của
+các thành viên của nó. Ví dụ sau đây không phải là một Interface hợp lệ
