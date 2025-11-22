@@ -5,11 +5,15 @@ namespace InterfaceDemo;
 public class MyMessageBuilder : IMessageBuilder
 {
     private string _myMessage = "";
-    string myMessage; // Fields are invalid in interfaces
+    public string MyMessage
+    {
+        get => _myMessage;
+        set => _myMessage = value;
+    }
 
-    string MyMessage { get; set; }
+
     public void ShowMessage()
     {
-        throw new NotImplementedException();
+        Console.WriteLine(_myMessage);
     }
 }

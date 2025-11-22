@@ -7,6 +7,12 @@
             IDemoInterface demo = new DemoInterface();
             //error CS0535: 'DemoInterface' does not implement interface member 'IDemoInterface.DemoMethod1()'
             // demo.DemoMethod1();
+
+            MyMessageBuilder msgBuilder = new()
+            {
+                MyMessage = "Interface Demo"
+            };
+            msgBuilder.ShowMessage();
         }
     }
 }
