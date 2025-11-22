@@ -1,0 +1,26 @@
+Mặc dù bề ngoài, 
+Struct và Class trông giống nhau, 
+nhưng sự khác biệt lớn về hành vi xảy ra khi các thể hiện Struct và Class 
+được sao chép hoặc truyền dưới dạng đối số cho các phương thức. 
+Điều này xảy ra vì các thể hiện Struct là kiểu giá trị(Value types) trong khi các thể hiện 
+Class là kiểu tham chiếu(reference types).
+
+Khi một thể hiện Struct được sao chép hoặc truyền cho một phương thức, 
+một bản sao thực tế của thể hiện đó sẽ được tạo ra, cùng với bất kỳ dữ liệu nào chứa trong thể hiện đó.
+
+Điều này có nghĩa là bản sao có phiên bản dữ liệu riêng, 
+không liên quan đến thể hiện Struct gốc. 
+Trên thực tế, điều này có nghĩa là có thể có nhiều bản sao của một thể hiện Struct 
+trong một ứng dụng đang chạy, mỗi bản sao có bản sao cục bộ riêng của dữ liệu được liên kết. 
+Thay đổi đối với một thể hiện không ảnh hưởng đến bất kỳ thể hiện nào khác.
+
+Ngược lại, khi một thể hiện Class được sao chép hoặc truyền dưới dạng đối số, 
+thứ duy nhất được sao chép hoặc truyền là tham chiếu 
+đến vị trí trong bộ nhớ nơi thể hiện Class đó cư trú. 
+
+Bất kỳ thay đổi nào được thực hiện đối với thể hiện bằng các tham chiếu 
+đó sẽ được thực hiện trên cùng một thể hiện. Nói cách khác, 
+chỉ có một thể hiện Class nhưng có nhiều tham chiếu trỏ đến nó. 
+
+Một thay đổi đối với dữ liệu thể hiện bằng bất kỳ tham chiếu nào trong số đó 
+sẽ thay đổi dữ liệu cho tất cả các tham chiếu khác.
