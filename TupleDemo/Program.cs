@@ -40,7 +40,9 @@
 
 
 
-
+            DisplayProductData((20, "Water filter", 29.99));
+            var myTuple4 = (20, "Water filter", 29.99);
+            DisplayProductData(myTuple4);
         }
 
         private static (int, string, double) GetProductData1()
@@ -48,6 +50,14 @@
             var myTuple = (Count: 10, Product: "Refrigerator", Price: 432.43);
             return myTuple;
             // return (10, "Refrigerator", 432.43);
+        }
+
+        public static void DisplayProductData((int, string, double) productTuple)
+        {
+            var (count, product, price) = productTuple;
+            Console.WriteLine($"Price = {price}");
+            Console.WriteLine($"Product = {product}");
+            Console.WriteLine($"Quantity = {count}");
         }
     }
 }
