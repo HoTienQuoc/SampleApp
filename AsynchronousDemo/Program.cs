@@ -25,40 +25,58 @@ namespace AsynchronousDemo
         //     return filename;
         // }
 
-        private static async Task<string> ProcessFileAsync(string filename)
+        private static async Task<string> ProcessFileAsync(string filename, CancellationToken cancellationToken)
         {
             Console.WriteLine($"Start {filename} at {DateTime.Now}");
-            await Task.Delay(6000);
+            try
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                await Task.Delay(6000, cancellationToken);
+
+            }
+            catch (OperationCanceledException)
+            {
+
+                Console.WriteLine($"{filename} processing cancelled");
+            }
             return filename;
         }
 
         static async Task Main(string[] args)
         {
+            var tokenSource = new CancellationTokenSource();
+            var cancellationToken = tokenSource.Token;
             Stopwatch stopwatch = Stopwatch.StartNew();
             Console.WriteLine("\n=== Before async task calls ===\n");
-            // string filename1 = await ProcessFileAsync("file1.txt");
+            // string filename1 = await ProcessFileAsync("file1.txt", cancellationToken);
             // Console.WriteLine($"End {filename1} at {DateTime.Now}\n");
-            // string filename2 = await ProcessFileAsync("file2.txt");
+            // string filename2 = await ProcessFileAsync("file2.txt", cancellationToken);
             // Console.WriteLine($"End {filename2} at {DateTime.Now}\n");
-            // string filename3 = await ProcessFileAsync("file3.txt");
+            // string filename3 = await ProcessFileAsync("file3.txt", cancellationToken);
             // Console.WriteLine($"End {filename3} at {DateTime.Now}");
             // Console.WriteLine("\n=== After async tasks calls ===\n");
+
+
             // stopwatch.Stop();
             // TimeSpan timeSpan = stopwatch.Elapsed;
             // Console.WriteLine($"Elapsed time: {timeSpan.Seconds} seconds\n");
 
-            Task<string> task1 = ProcessFileAsync("file1.txt");
-            Task<string> task2 = ProcessFileAsync("file2.txt");
-            Task<string> task3 = ProcessFileAsync("file3.txt");
+            Task<string> task1 = ProcessFileAsync("file1.txt", cancellationToken);
+            Task<string> task2 = ProcessFileAsync("file2.txt", cancellationToken);
+            Task<string> task3 = ProcessFileAsync("file3.txt", cancellationToken);
 
             Console.WriteLine("=== After async tasks calls ===\n");
 
-            // string filename1 = await task1;
-            // Console.WriteLine($"End {filename1} at {DateTime.Now}");
-            // string filename2 = await task2;
-            // Console.WriteLine($"End {filename2} at {DateTime.Now}");
-            // string filename3 = await task3;
-            // Console.WriteLine($"End {filename3} at {DateTime.Now}\n");
+            Console.Write("Press any key to cancel");
+            Console.ReadKey();
+            tokenSource.Cancel();
+
+            // // string filename1 = await task1;
+            // // Console.WriteLine($"End {filename1} at {DateTime.Now}");
+            // // string filename2 = await task2;
+            // // Console.WriteLine($"End {filename2} at {DateTime.Now}");
+            // // string filename3 = await task3;
+            // // Console.WriteLine($"End {filename3} at {DateTime.Now}\n");
             Task.WaitAll(task1, task2, task3);
             Console.WriteLine($"End {task1.Result} at {DateTime.Now}");
             Console.WriteLine($"End {task2.Result} at {DateTime.Now}");
@@ -69,12 +87,12 @@ namespace AsynchronousDemo
             Console.WriteLine($"Elapsed time: {timeSpan.Seconds} seconds");
         }
 
-        private static void SyncMethod()
-        {
-            Task.Run(async () =>
-            {
-                await AsyncMethod();
-            });
-        }
+        // private static void SyncMethod()
+        // {
+        //     Task.Run(async () =>
+        //     {
+        //         await AsyncMethod();
+        //     });
+        // }
     }
 }
