@@ -71,7 +71,10 @@ namespace AsynchronousDemo
 
         private static void SyncMethod()
         {
-            await AsyncMethod();
+            Task.Run(async () =>
+            {
+                await AsyncMethod();
+            });
         }
     }
 }
