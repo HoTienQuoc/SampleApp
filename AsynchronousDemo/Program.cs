@@ -1,2 +1,35 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Diagnostics;
+namespace AsynchronousDemo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            Console.WriteLine("\n=== Before async task calls ===\n");
+            string filename1 = ProcessFile("file1.txt");
+            Console.WriteLine($"End {filename1} at {DateTime.Now}\n");
+            string filename2 = ProcessFile("file2.txt");
+            Console.WriteLine($"End {filename2} at {DateTime.Now}\n");
+            string filename3 = ProcessFile("file3.txt");
+            Console.WriteLine($"End {filename3} at {DateTime.Now}\n");
+            Console.WriteLine("=== After async tasks calls ===\n");
+            stopwatch.Stop();
+            TimeSpan timeSpan = stopwatch.Elapsed;
+            Console.WriteLine($"Elapsed time: {timeSpan.Seconds} seconds");
+        }
+        private static string ProcessFile(string filename)
+        {
+            Console.WriteLine($"Start {filename} at {DateTime.Now}");
+            Task.Delay(6000).Wait();
+            return filename;
+        }
+
+        private static async Task<string> ProcessFileAsync(string filename)
+        {
+            Console.WriteLine($"Start {filename} at {DateTime.Now}");
+            await Task.Delay(6000);
+            return filename;
+        }
+    }
+}
