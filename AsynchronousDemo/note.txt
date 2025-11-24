@@ -1,0 +1,13 @@
+Lập trình Asynchronous cho phép phần mềm thực hiện nhiều tác vụ
+đồng thời. Điều này có nghĩa là các tác vụ như tải xuống hình ảnh hoặc xử lý lượng dữ liệu lớn có thể được hoàn thành nhanh hơn so với khi thực hiện tuần tự. Đa tác vụ cũng mang lại trải nghiệm người dùng mượt mà hơn bằng cách
+cho phép các tác vụ tốn thời gian được thực hiện ở chế độ nền
+mà không ảnh hưởng đến khả năng phản hồi của ứng dụng.
+Trong chương này, chúng ta sẽ khám phá các tính năng Asynchronous của C# và giải thích
+cách chúng có thể được sử dụng để tích hợp hỗ trợ đa tác vụ vào
+dự án của bạn
+
+
+Threads là một tính năng cơ bản của CPU hiện đại và rất cần thiết cho đa nhiệm trong các hệ điều hành. Mặc dù CPU có thể xử lý nhiều Threads, nhưng số lượng Threads thực tế có thể chạy song song tại một thời điểm nhất định bị giới hạn bởi số lõi CPU, thường dao động từ 4 đến 16 lõi tùy thuộc vào kiểu CPU. Khi số lượng Threads vượt quá số lõi CPU khả dụng, hệ điều hành sẽ sử dụng lập lịch Threads để xác định cách các Threads này được chia sẻ giữa các lõi khả dụng.
+Threads giống như các tiến trình nhỏ chạy trong một tiến trình chính. Chúng cho phép thực thi song song trong các ứng dụng và việc quản lý chúng trực tiếp trong mã có thể là một quá trình phức tạp và khó lường. Tuy nhiên, điều tuyệt vời về tính năng bất đồng bộ của C# là chúng sử dụng các Threads ở chế độ nền, xử lý mọi sự phức tạp cho bạn.
+
+TAP:Task Asynchronous Programming
