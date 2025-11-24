@@ -53,16 +53,25 @@ namespace AsynchronousDemo
 
             Console.WriteLine("=== After async tasks calls ===\n");
 
-            string filename1 = await task1;
-            Console.WriteLine($"End {filename1} at {DateTime.Now}");
-            string filename2 = await task2;
-            Console.WriteLine($"End {filename2} at {DateTime.Now}");
-            string filename3 = await task3;
-            Console.WriteLine($"End {filename3} at {DateTime.Now}\n");
+            // string filename1 = await task1;
+            // Console.WriteLine($"End {filename1} at {DateTime.Now}");
+            // string filename2 = await task2;
+            // Console.WriteLine($"End {filename2} at {DateTime.Now}");
+            // string filename3 = await task3;
+            // Console.WriteLine($"End {filename3} at {DateTime.Now}\n");
+            Task.WaitAll(task1, task2, task3);
+            Console.WriteLine($"End {task1.Result} at {DateTime.Now}");
+            Console.WriteLine($"End {task2.Result} at {DateTime.Now}");
+            Console.WriteLine($"End {task3.Result} at {DateTime.Now}");
 
             stopwatch.Stop();
             TimeSpan timeSpan = stopwatch.Elapsed;
             Console.WriteLine($"Elapsed time: {timeSpan.Seconds} seconds");
+        }
+
+        private static void SyncMethod()
+        {
+            await AsyncMethod();
         }
     }
 }
