@@ -3,6 +3,8 @@ namespace ExceptHandlingDemo
 {
     internal class Program
     {
+        private static int motorTemp;
+
         static void Main(string[] args)
         {
             try
@@ -21,6 +23,27 @@ namespace ExceptHandlingDemo
                 {
                     Console.WriteLine(ex.Message);
                 }
+            }
+            try
+            {
+                VoltageCheck(501);
+            }
+            catch (Exception ex) when (ex is ArgumentOutOfRangeException &&
+            motorTemp > 102)
+            {
+            }
+
+            try
+            {
+                VoltageCheck(501);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Resetting system.");
             }
         }
 
