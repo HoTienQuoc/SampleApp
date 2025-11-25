@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousDemo", "Asynchr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jagged_2D_3D_Arrays_Demo", "Jagged_2D_3D_Arrays_Demo\Jagged_2D_3D_Arrays_Demo.csproj", "{3324DE69-295D-499B-95B3-A12510FADB6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayDemo", "ArrayDemo\ArrayDemo.csproj", "{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -237,6 +239,18 @@ Global
 		{3324DE69-295D-499B-95B3-A12510FADB6A}.Release|x64.Build.0 = Release|Any CPU
 		{3324DE69-295D-499B-95B3-A12510FADB6A}.Release|x86.ActiveCfg = Release|Any CPU
 		{3324DE69-295D-499B-95B3-A12510FADB6A}.Release|x86.Build.0 = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|x64.Build.0 = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Debug|x86.Build.0 = Debug|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|x64.Build.0 = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{FAB2F52A-2593-4D0D-A17F-3BDCC8DE1EC6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
