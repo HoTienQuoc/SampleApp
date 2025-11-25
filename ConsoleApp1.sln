@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryCollectionsDemo",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDirectoryHandlingDemo", "FileDirectoryHandlingDemo\FileDirectoryHandlingDemo.csproj", "{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringsDemo", "StringsDemo\StringsDemo.csproj", "{FCD30343-8B29-4C58-8664-9B4CDD16668B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,18 @@ Global
 		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x64.Build.0 = Release|Any CPU
 		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x86.ActiveCfg = Release|Any CPU
 		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x86.Build.0 = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|x64.Build.0 = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Debug|x86.Build.0 = Debug|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|x64.ActiveCfg = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|x64.Build.0 = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|x86.ActiveCfg = Release|Any CPU
+		{FCD30343-8B29-4C58-8664-9B4CDD16668B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
