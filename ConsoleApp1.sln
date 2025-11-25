@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListCollectionsDemo", "List
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryCollectionsDemo", "DictionaryCollectionsDemo\DictionaryCollectionsDemo.csproj", "{86D20660-C671-49E9-BA4E-E79F684E6369}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDirectoryHandlingDemo", "FileDirectoryHandlingDemo\FileDirectoryHandlingDemo.csproj", "{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +281,18 @@ Global
 		{86D20660-C671-49E9-BA4E-E79F684E6369}.Release|x64.Build.0 = Release|Any CPU
 		{86D20660-C671-49E9-BA4E-E79F684E6369}.Release|x86.ActiveCfg = Release|Any CPU
 		{86D20660-C671-49E9-BA4E-E79F684E6369}.Release|x86.Build.0 = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|x64.Build.0 = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Debug|x86.Build.0 = Debug|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x64.ActiveCfg = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x64.Build.0 = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{D72EE073-AABE-4BD4-B3C1-785FB7B2E8D3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

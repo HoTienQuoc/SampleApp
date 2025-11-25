@@ -1,0 +1,10 @@
+•Path - Cung cấp một tập hợp các phương thức để quản lý chuỗi đường dẫn tệp, bao gồm việc xây dựng các đường dẫn mới và thu thập thông tin về các đường dẫn hiện có.
+•Directory - Cung cấp một tập hợp các phương thức tĩnh để tạo, xóa, di chuyển và điều hướng các cấu trúc thư mục hệ thống tệp.
+•DirectoryInfo - Cung cấp một tập hợp các tính năng tương tự như lớp Directory nhưng ở dạng các phương thức không tĩnh. Điều này bao gồm việc tạo một thể hiện DirectoryInfo được khởi tạo với đường dẫn thư mục và sau đó gọi các phương thức trên
+đối tượng đó.
+•File - Bao gồm một tập hợp các phương thức tĩnh để làm việc với tệp, bao gồm các phương thức để tạo, sao chép, xóa và mở tệp. Các phương thức tĩnh File
+là các đường dẫn được truyền đến các tệp mà hành động tương ứng sẽ được thực hiện.
+•FileInfo - Cung cấp các tính năng tương tự như lớp File nhưng ở dạng các phương thức không tĩnh. Điều này bao gồm việc tạo một thể hiện FileInfo được khởi tạo với đường dẫn tệp và sau đó gọi các phương thức trên đối tượng đó để thực hiện các thao tác như mở, xóa, đọc và ghi.
+•StreamReader / StreamWriter - Các lớp StreamReader và StreamWriter cung cấp một giải pháp thay thế linh hoạt hơn cho các lớp File và FileInfo để đọc và ghi vào tệp. Các lớp này được thiết kế để sử dụng khi làm việc với các tệp dạng văn bản.
+•BinaryReader / BinaryWriter - Các lớp này thực hiện cùng chức năng như các lớp StreamReader và StreamWriter, nhưng được sử dụng
+khi làm việc với các tệp chứa dữ liệu nhị phân.
